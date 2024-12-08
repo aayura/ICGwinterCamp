@@ -10,7 +10,11 @@ list2 = []
 
 for i in range(n):
     list1.append(i)
-    list2.append(i*rndm.random())
+    j = rndm.random()
+    if (j>0.5):
+        list2.append(i + (j*(10**(rndm.random()))))
+    else:
+        list2.append(i - (j*(10**(rndm.random()))))
 
 nplist1 = np.array(list1)
 nplist2 = np.array(list2)
